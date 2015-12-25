@@ -14,14 +14,10 @@
  * limitations under the License.
  */
 
-package sample.tomcat;
+package com.fxtrader.tomcat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import sample.tomcat.NonAutoConfigurationSampleTomcatApplicationTests.NonAutoConfigurationSampleTomcatApplication;
-import sample.tomcat.service.HelloWorldService;
-import sample.tomcat.web.SampleController;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration;
@@ -41,6 +37,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
+
+import com.fxtrader.tomcat.NonAutoConfigurationSampleTomcatApplicationTests.NonAutoConfigurationSampleTomcatApplication;
+import com.fxtrader.service.HelloWorldService;
+import com.fxtrader.web.SampleController;
 
 import static org.junit.Assert.assertEquals;
 

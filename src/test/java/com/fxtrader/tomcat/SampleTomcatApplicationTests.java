@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package sample.tomcat;
+package com.fxtrader.tomcat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

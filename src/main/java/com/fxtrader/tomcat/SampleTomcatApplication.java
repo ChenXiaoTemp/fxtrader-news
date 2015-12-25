@@ -19,17 +19,15 @@ package com.fxtrader.tomcat;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@Slf4j
 public class SampleTomcatApplication {
-
-	private static Log logger = LogFactory.getLog(SampleTomcatApplication.class);
 
 	@Bean
 	protected ServletContextListener listener() {
@@ -37,12 +35,12 @@ public class SampleTomcatApplication {
 
 			@Override
 			public void contextInitialized(ServletContextEvent sce) {
-				logger.info("ServletContext initialized");
+				log.info("ServletContext initialized");
 			}
 
 			@Override
 			public void contextDestroyed(ServletContextEvent sce) {
-				logger.info("ServletContext destroyed");
+				log.info("ServletContext destroyed");
 			}
 
 		};

@@ -14,9 +14,9 @@
 		<name>Pivotal Software, Inc.</name>
 		<url>http://www.spring.io</url>
 	</organization>
-<!-- 	<properties>
-		<main.basedir>${basedir}/../..</main.basedir>
-	</properties> -->
+	<properties>
+		<main.basedir>${basedir}</main.basedir>
+	</properties> 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -35,6 +35,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+		   <groupId>org.projectlombok</groupId>
+		   <artifactId>lombok</artifactId>
+		   <version>1.16.6</version>
+		   <scope>provided</scope>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.google.guava</groupId>
+	      <artifactId>guava</artifactId>
+	      <version>19.0</version>
+        </dependency>
 	</dependencies>
 	<repositories>
 		<repository>
@@ -87,16 +98,6 @@
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<configuration>
 					<useProjectReferences>false</useProjectReferences>
-					<additionalConfig>
-						<file>
-							<name>.settings/org.eclipse.jdt.ui.prefs</name>
-							<location>${main.basedir}/eclipse/org.eclipse.jdt.ui.prefs</location>
-						</file>
-						<file>
-							<name>.settings/org.eclipse.jdt.core.prefs</name>
-							<location>${main.basedir}/eclipse/org.eclipse.jdt.core.prefs</location>
-						</file>
-					</additionalConfig>
 				</configuration>
 			</plugin>
 			<plugin>
