@@ -2,3 +2,8 @@ target/
 .settings
 .project
 .classpath
+node_modules
+src/main/webapp/js/lib
+src/main/webapp/css/lib
+src/main/webapp/less/lib
+
