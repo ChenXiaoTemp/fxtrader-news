@@ -39,8 +39,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.fxtrader.tomcat.NonAutoConfigurationSampleTomcatApplicationTests.NonAutoConfigurationSampleTomcatApplication;
+import com.fxtrader.controller.SampleController;
 import com.fxtrader.service.HelloWorldService;
-import com.fxtrader.web.SampleController;
 
 import static org.junit.Assert.assertEquals;
 
