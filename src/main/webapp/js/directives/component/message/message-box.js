@@ -7,7 +7,7 @@
  * # adminPosHeader
  */
 angular.module('sbAdminApp')
-    .directive('stats',function() {
+    .directive('messageBox',function() {
     	return {
   		templateUrl:'js/directives/component/message/message-box.html',
   		restrict:'E',

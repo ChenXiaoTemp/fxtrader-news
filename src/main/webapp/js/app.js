@@ -154,8 +154,24 @@ angular
        url:'/grid'
    })
     .state('dashboard.messageBox',{
-        templateUrl:'views/message/message-box.html',
-        url:'/message-box'
+        url:'/message-box',
+        controller: 'MainCtrl',
+        templateUrl:'views/component/message/message-box.html',
+        resolve: {
+          loadMyFiles:function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name:'sbAdminApp',
+              files:[
+              'js/controllers/main.js',
+              'js/directives/timeline/timeline.js',
+              'js/directives/notifications/notifications.js',
+              'js/directives/chat/chat.js',
+              'js/directives/dashboard/stats/stats.js',
+              'js/directives/component/message/message-box.js'
+              ]
+            })
+          }
+        }
     })
   }]);
 
