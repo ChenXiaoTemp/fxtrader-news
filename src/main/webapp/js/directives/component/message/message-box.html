@@ -1,0 +1,31 @@
+<div class="panel panel-{{colour}}">
+	<div class="panel-heading">
+		<div class="row">
+		    <div class="col-xs-6">
+		        <div>{{time}}</div>
+		    </div>
+			<div class="col-xs-3">
+			</div>
+			<div class="col-xs-3">
+     			<i class="fa fa-{{type}} fa-1x"></i>
+			</div>
+		</div>
+		<div class="row">
+		    <div class="col-xs-12 text-center">
+				<div>{{comments}}</div>
+			</div>
+		</div>
+		<div class="row visiable:{{image}}">
+			<div class="span12">
+				<img src="{{image}}" />
+			</div>
+		</div>
+	</div>
+	<a ui-sref="{{goto}}">
+		<div class="panel-footer">
+			<span class="pull-left">View Details</span> <span class="pull-right"><i
+				class="fa fa-arrow-circle-right"></i></span>
+			<div class="clearfix"></div>
+		</div>
+	</a>
+</div>

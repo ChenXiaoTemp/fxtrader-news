@@ -86,7 +86,8 @@ angular
               'js/directives/timeline/timeline.js',
               'js/directives/notifications/notifications.js',
               'js/directives/chat/chat.js',
-              'js/directives/dashboard/stats/stats.js'
+              'js/directives/dashboard/stats/stats.js',
+              'js/directives/component/message/message-box.js'
               ]
             })
           }
@@ -152,6 +153,10 @@ angular
        templateUrl:'views/ui-elements/grid.html',
        url:'/grid'
    })
+    .state('dashboard.messageBox',{
+        templateUrl:'views/message/message-box.html',
+        url:'/message-box'
+    })
   }]);
 
     
