@@ -1,0 +1,66 @@
+<div ng-controller="HistoryDailyReportCtrl">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header text-center">Daily Report List</h1>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+
+	<div class="row">
+		<div class="col-xs-1">
+			<label>Select Date</label>
+		</div>
+		<div class="col-xs-11">
+			<a class="dropdown-toggle" id="dropdown2" role="button"
+				data-toggle="dropdown" data-target="#" href="">
+				<div class="input-group">
+					<input type="text" class="form-control" data-ng-model="data.date">
+					<span class="input-group-addon"><i
+						class="glyphicon glyphicon-calendar"></i></span>
+				</div>
+			</a>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-xs-10">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#">EUR/USD</a></li>
+				<li><a href="#">GOLD</a></li>
+				<li><a href="#">SILVER</a></li>
+			</ul>
+		</div>
+		<div class="col-xs-2">
+			<div class="btn-group pull-right">
+				<button type="button" class="btn btn-default btn-xs dropdown-toggle"
+					data-toggle="dropdown">
+					<i class="fa fa-chevron-down"></i>
+				</button>
+				<ul class="dropdown-menu slidedown">
+					<li><a href="#"> <i
+							class="fa fa-chevron-circle-left fa-fw"></i> Previus Day
+					</a></li>
+					<li><a href="#"> <i
+							class="fa  fa-chevron-circle-right fa-fw"></i> Next Day
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-3">
+			<img src="images/test.jpg" width="200px;" />
+		</div>
+		<div class="col-xs-3">
+			<div class="show">Today's a good day, we need keep in mind
+				that, keep cautions on FX.</div>
+			<textarea class="form-control hidden" rows="5" id="comment"></textarea>
+		</div>
+		<div class="col-xs-6">
+			<iframe
+				src="http://markets.wallstreetcn.com/technical?symbol=XAUUSD&interval=1D"
+				frameBorder="0" width="700px" height="500px"></iframe>
+		</div>
+	</div>
+</div>

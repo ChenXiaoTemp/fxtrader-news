@@ -12,7 +12,7 @@ angular
     'oc.lazyLoad',
     'ui.router',
     'ui.bootstrap',
-    'angular-loading-bar',
+    'angular-loading-bar'
   ])
   .config(['$stateProvider','$urlRouterProvider','$ocLazyLoadProvider',function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
     $ocLazyLoadProvider.config({
@@ -167,7 +167,43 @@ angular
               'js/directives/notifications/notifications.js',
               'js/directives/chat/chat.js',
               'js/directives/dashboard/stats/stats.js',
-              'js/directives/component/message/message-box.js'
+              'js/directives/component/message/message-box.js',
+              'js/directives/component/message/message-comment/message-comment.js'
+              ]
+            })
+          }
+        }
+    })
+    
+    .state('dashboard.dailyReport',{
+        url:'/daily-report',
+        controller: 'MainCtrl',
+        templateUrl:'views/daily-report/daily-report.html',
+        resolve: {
+          loadMyFiles:function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name:'sbAdminApp',
+              files:[
+              'js/controllers/main.js',
+              'js/directives/dashboard/stats/stats.js'
+              ]
+            })
+          }
+        }
+    })
+    
+    .state('dashboard.historyDailyReport',{
+        url:'/history-daily-report',
+        controller: 'MainCtrl',
+        templateUrl:'views/daily-report/history-daily-report.html',
+        resolve: {
+          loadMyFiles:function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name:'sbAdminApp',
+              files:[
+              'js/controllers/main.js',
+              'js/directives/dashboard/stats/stats.js',
+              "js/controllers/historyDailyReport.js"
               ]
             })
           }
