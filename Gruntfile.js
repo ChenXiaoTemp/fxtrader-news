@@ -42,7 +42,9 @@ module.exports = function(grunt) {
                     {src: ['bower_components/metisMenu/**/*.min.css'], dest: 'src/main/webapp/css/lib/metisMenu', filter: 'isFile', expand: true, flatten: true},
                     {src: ['bower_components/oclazyload/**/*.min.js'], dest: 'src/main/webapp/js/lib/oclazyload', filter: 'isFile', expand: true, flatten: true},
                     {src: ['bower_components/angular-chart.js/**/*.min.js'], dest: 'src/main/webapp/js/lib/angular-chart', filter: 'isFile', expand: true, flatten: true},
-                    {src: ['bower_components/angular-chart.js/**/*.min.css'], dest: 'src/main/webapp/css/lib/angular-chart', filter: 'isFile', expand: true, flatten: true}
+                    {src: ['bower_components/angular-chart.js/**/*.min.css'], dest: 'src/main/webapp/css/lib/angular-chart', filter: 'isFile', expand: true, flatten: true},
+                    {src: ['bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js'], dest: 'src/main/webapp/js/lib/angular-bootstrap-datetimepicker', filter: 'isFile', expand: true, flatten: true,rename:renameToMinFile},
+                    {src: ['bower_components/angular-bootstrap-datetimepicker/**/*.css'], dest: 'src/main/webapp/css/lib/angular-bootstrap-datetimepicker', filter: 'isFile', expand: true, flatten: true}
                     ]
             },
             develop: {
@@ -77,7 +79,9 @@ module.exports = function(grunt) {
                     {src: ['bower_components/metisMenu/**/*.min.css'], dest: 'src/main/webapp/css/lib/metisMenu', filter: 'isFile', expand: true, flatten: true},
                     {src: ['bower_components/oclazyload/dist/ocLazyLoad.js'], dest: 'src/main/webapp/js/lib/oclazyload', filter: 'isFile', expand: true, flatten: true,rename:renameToMinFile},
                     {src: ['bower_components/angular-chart.js/dist/angular-chart.js'], dest: 'src/main/webapp/js/lib/angular-chart', filter: 'isFile', expand: true, flatten: true,rename:renameToMinFile},
-                    {src: ['bower_components/angular-chart.js/**/*.min.css'], dest: 'src/main/webapp/css/lib/angular-chart', filter: 'isFile', expand: true, flatten: true}
+                    {src: ['bower_components/angular-chart.js/**/*.min.css'], dest: 'src/main/webapp/css/lib/angular-chart', filter: 'isFile', expand: true, flatten: true},
+                    {src: ['bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js'], dest: 'src/main/webapp/js/lib/angular-bootstrap-datetimepicker', filter: 'isFile', expand: true, flatten: true,rename:renameToMinFile},
+                    {src: ['bower_components/angular-bootstrap-datetimepicker/src/css/*.css'], dest: 'src/main/webapp/css/lib/angular-bootstrap-datetimepicker', filter: 'isFile', expand: true, flatten: true}
                     ]
             }
         },
