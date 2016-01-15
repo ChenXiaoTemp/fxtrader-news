@@ -12,7 +12,7 @@ angular
     'oc.lazyLoad',
     'ui.router',
     'ui.bootstrap',
-    'angular-loading-bar'
+    'angular-loading-bar','ui.bootstrap.datetimepicker'
   ])
   .config(['$stateProvider','$urlRouterProvider','$ocLazyLoadProvider',function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
     $ocLazyLoadProvider.config({
@@ -70,6 +70,12 @@ angular
                   name:'ngTouch',
                   files:['js/lib/angular-touch/angular-touch.min.js']
                 })
+                $ocLazyLoad.load(
+                {
+                  name:'ui.bootstrap',
+                  files:['js/lib/angular-bootstrap/ui-bootstrap.min.js']
+                })
+                
             }
         }
     })
