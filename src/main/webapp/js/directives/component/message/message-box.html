@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-xs-6 col-md-6 text-left">{{source}}</div>
+			<div class="col-xs-3 col-md-6 pull-right">
+				<div class="row">
+					<span class="text-center">{{time}}</span>
+					<div class="btn-group pull-right">
+						<button class="btn" type="button">
+							<em class="fa fa-edit"></em>
+						</button>
+						<button class="btn" type="button">
+							<em class="fa fa-trash-o"></em>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="row">
+						<div class="col-xs-12 text-left">{{message}}</div>
+					</div>
+					<div
+						class="row visiable:{{(images && images.length!=0)?'visible':'hidden'}}">
+						<div ng-repeat="image in images track by $index">
+							<div class="col-xs-{{(12/images.length).toFixed(0)}}">
+								<img src="{{image}}" class="img-responsive" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-footer">
+			<!--  <div ng-repeat="comment in comments track by $index">
+		    <message-comment content={{comment.content}} images={{comment.images}}></message-comment>
+		</div>-->
+			<div class="row">
+				<div class="col-xs-6 col-md-10 text-left">
+					<i class="fa fa-comments">Comment</i>
+				</div>
+				<div class="col-xs-1">
+					<button type="button" class="btn btn-primary">File</button>
+				</div>
+			</div>
+		</div>
+	</div>
